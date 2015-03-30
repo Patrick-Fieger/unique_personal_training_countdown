@@ -1,10 +1,17 @@
 $(document).ready(function() {
-	
+	var heightWindow;
+	var height;
 	function centerWrapper(){
-		var height = $('.wrapper').height(),
+		height = $('.wrapper').height()
 		heightWindow = $(window).height(),
 		diff = (heightWindow - height) / 2
 		$('.wrapper').css('padding-top',diff + 'px');
+	}
+
+	function initAnimation(){
+		var logoheight = $('.logo_wrapper').height();
+		var diff = (height - logoheight) / 2
+		$('.logo_wrapper').css('margin-top',diff - 100 + 'px')
 	}
 
 
@@ -33,12 +40,20 @@ $(document).ready(function() {
 	});
 
 	setTimeout(function(){
+		$('body').scrollTop(0);
 		$('.loader').addClass('hide');
 		setTimeout(function(){
 			$('.wrapper').addClass('active');
+			setTimeout(function(){
+				$('.logo_wrapper').addClass('active');
+				setTimeout(function(){
+					$('.content_wrapper,body').addClass('active');
+				},1200)
+			},3000)
 		},400)
 	},2000)
 
 	$(window).smartresize(centerWrapper);
 	centerWrapper();
+	initAnimation();
 });

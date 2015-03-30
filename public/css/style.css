@@ -123,21 +123,56 @@ input, select {
 	opacity: 0;
 	visibility: hidden;
 }
+
+ul li a:hover,
+.unique,
+.personal{
+	color: #fff;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
-a, input, button, .loader{
+a, input, button, .loader,
+.logo_wrapper{
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-.wrapper {
+
+.logo_wrapper{
+	-webkit-transition: margin-top 2s ease-in-out;
+    -moz-transition: margin-top 2s ease-in-out;
+    -o-transition: margin-top 2s ease-in-out;
+    transition: margin-top 2s ease-in-out;
+}
+
+.wrapper{
     -webkit-transition: opacity 5s;
     -moz-transition: opacity 5s;
     -o-transition: opacity 5s;
     transition: opacity 5s;
+}
+
+.content_wrapper{
+	-webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+}
+
+.content_wrapper{
+	margin-top: 200px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.content_wrapper.active{
+	margin-top: 0;
+	opacity: 1;
+	visibility: visible;
 }
 .wrapper, .logo {
     margin: 0 auto;
@@ -145,8 +180,17 @@ a, input, button, .loader{
 .unique, .personal, .copy {
     text-align: center;
 }
+
+body{
+	overflow: hidden;
+}
+
+body.active{
+	overflow: auto !important;
+}
+
 body, html {
-    background: #fff;
+    background: #000;
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -168,6 +212,9 @@ body, html {
     font-weight: 200;
     font-size: 24px;
 }
+.logo_wrapper.active{
+	margin-top: 0 !important;
+}
 .logo {
     background: url(../img/logo.svg);
     width: 250px;
@@ -188,26 +235,29 @@ body, html {
     height: 100%;
     vertical-align: initial;
     margin-right: 20px;
-    width: 275px
+    width: 275px;
+    background: #000;
+    color: #fff;
 }
 .email:focus {
     outline: none;
-    border-bottom-color: #000;
+    border-bottom-color: #fff;
 }
 button {
-    background: #fff;
+    background: #000;
     border: none;
-    border: 2px solid #000;
+    border: 2px solid #fff;
     border-radius: 2px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height: 100%;
     padding: 10px 15px;
     font-size: 15px;
+    color: #fff;
 }
 button:hover {
     cursor: pointer;
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #000;
 }
 ul {
     padding: 0;
@@ -224,14 +274,11 @@ ul li a {
     margin: 0 10px;
     color: #999;
 }
-ul li a:hover {
-    color: #000;
-}
 .copy {
     width: 100%;
     text-align: center;
     font-size: 13px;
-    color: #ccc;
+    color: #999;
     font-weight: 300;
 }
 #countdown-title {
@@ -239,13 +286,13 @@ ul li a:hover {
     font-size: 24px;
     line-height: 29px;
     text-transform: uppercase;
-    color: #000;
+    color: #fff;
     letter-spacing: 2px;
     margin-bottom: 4px;
 }
 #countdown {
     font-weight: 300;
-    color: #000;
+    color: #fff;
     width: 603px;
     margin: 50px auto 0 auto;
 }
