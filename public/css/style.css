@@ -1,0 +1,287 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+body {
+    line-height: 1
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+nav ul {
+    list-style: none
+}
+blockquote, q {
+    quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none
+}
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none
+}
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold
+}
+del {
+    text-decoration: line-through
+}
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+input, select {
+    vertical-align: middle
+}
+@font-face {
+    font-family: 'unique';
+    src: url('fonts/unique.eot?2mn88l');
+    src: url('fonts/unique.eot?#iefix2mn88l') format('embedded-opentype'), url('fonts/unique.woff?2mn88l') format('woff'), url('fonts/unique.ttf?2mn88l') format('truetype'), url('fonts/unique.svg?2mn88l#unique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'unique';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-old-mobile:before {
+    content: "\e600";
+}
+.icon-paper-plane:before {
+    content: "\e601";
+}
+.icon-skype:before {
+    content: "\e602";
+}
+.icon-spotify:before {
+    content: "\e603";
+}
+.icon-facebook:before {
+    content: "\e604";
+}
+.icon-google:before {
+    content: "\e605";
+}
+.icon-instagram:before {
+    content: "\e606";
+}
+.icon-twitter:before {
+    content: "\e607";
+}
+.icon-youtube:before {
+    content: "\e608";
+}
+.loader {
+    background: url(../img/puff.svg);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+}
+
+.loader.hide{
+	opacity: 0;
+	visibility: hidden;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a, input, button, .loader{
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.wrapper {
+    -webkit-transition: opacity 5s;
+    -moz-transition: opacity 5s;
+    -o-transition: opacity 5s;
+    transition: opacity 5s;
+}
+.wrapper, .logo {
+    margin: 0 auto;
+}
+.unique, .personal, .copy {
+    text-align: center;
+}
+body, html {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.wrapper {
+    width: 630px;
+    margin-bottom: 100px;
+    opacity: 0;
+}
+.wrapper.active {
+    opacity: 1;
+}
+.unique {
+    font-size: 60px;
+    font-family: "trajan-sans-pro", sans-serif;
+}
+.personal {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 24px;
+}
+.logo {
+    background: url(../img/logo.svg);
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+}
+#form {
+    width: 415px;
+    height: 40px;
+    margin: 70px auto 20px auto;
+}
+.email {
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-weight: 200;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+    vertical-align: initial;
+    margin-right: 20px;
+    width: 275px
+}
+.email:focus {
+    outline: none;
+    border-bottom-color: #000;
+}
+button {
+    background: #fff;
+    border: none;
+    border: 2px solid #000;
+    border-radius: 2px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+button:hover {
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+ul {
+    padding: 0;
+    width: 350px;
+    margin: 50px auto 20px auto;
+    height: 30px;
+}
+ul li {
+    list-style: none;
+    float: left;
+}
+ul li a {
+    font-size: 30px;
+    margin: 0 10px;
+    color: #999;
+}
+ul li a:hover {
+    color: #000;
+}
+.copy {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 300;
+}
+#countdown-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+#countdown {
+    font-weight: 300;
+    color: #000;
+    width: 603px;
+    margin: 50px auto 0 auto;
+}
+#countdown .countdown-row {
+    overflow: hidden;
+}
+#countdown .countdown-section {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 0 26px;
+}
+#countdown .countdown-amount {
+    font-weight: 100;
+    font-size: 90px;
+    line-height: 108px;
+    margin-bottom: -9px;
+    display: block;
+}
+#countdown .sep {
+    top: 0;
+    right: -35px;
+    position: absolute;
+    margin: 0px;
+    font-size: 90px;
+    line-height: 108px;
+    display: none;
+}
+#countdown .countdown-period {
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+#countdown .countdown-section.secs {
+    min-width: 96px;
+    margin-left: 20px;
+}
