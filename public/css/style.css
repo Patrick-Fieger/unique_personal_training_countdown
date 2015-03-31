@@ -222,7 +222,7 @@ body, html {
     background-size: cover;
 }
 #form {
-    width: 415px;
+    width: 420px;
     height: 40px;
     margin: 70px auto 20px auto;
 }
@@ -253,6 +253,7 @@ button {
     padding: 10px 15px;
     font-size: 15px;
     color: #fff;
+    outline: none !important;
 }
 button:hover {
     cursor: pointer;
@@ -261,7 +262,7 @@ button:hover {
 }
 ul {
     padding: 0;
-    width: 350px;
+    width: 250px;
     margin: 50px auto 20px auto;
     height: 30px;
 }
@@ -331,4 +332,42 @@ ul li a {
 #countdown .countdown-section.secs {
     min-width: 96px;
     margin-left: 20px;
+}
+
+@media (max-width: 630px) {
+    .wrapper{
+        width: 100%;
+    }
+
+    #countdown .countdown-amount{
+        font-size: 60px;
+    }
+
+    #countdown .countdown-period{
+        font-size: 12px;
+    }
+
+    #countdown .countdown-section{
+        margin: 0 10px !important;
+    }
+
+    .email{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    button{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #form {
+        width: 300px;
+        height:auto;
+        overflow: hidden;
+    }
+
+    #countdown {
+        width: 377px;
+    }
 }

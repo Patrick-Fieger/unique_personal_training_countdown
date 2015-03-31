@@ -34,7 +34,11 @@ $(document).ready(function() {
 		    url: "/email/email.php",
 		    data: data,
 		    success: function(){
-		        
+		        $(".email").val('');
+		        $(".email").attr('placeholder','Email erfolgreich eingetragen!');
+		        setTimeout(function(){
+		        	$(".email").attr('placeholder','Email');
+		        },5000)
 		    }
 		});
 	});
